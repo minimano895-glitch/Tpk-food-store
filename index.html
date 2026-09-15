@@ -1,49 +1,21 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TPK Food Store</title>
-<meta name="description" content="TPK Food Store — delicious food, fresh ingredients and easy ordering.">
-<style>
-:root{--bg:#0b0b0b;--card:#151515;--gold:#f6c343;--text:#fff;--muted:#aaa}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}
-nav{position:sticky;top:0;z-index:10;background:rgba(11,11,11,.94);backdrop-filter:blur(12px);border-bottom:1px solid #252525;padding:16px 6%;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:24px;font-weight:900;letter-spacing:.5px}.logo span{color:var(--gold)}
-nav a{color:#ddd;text-decoration:none;margin-left:24px;font-weight:600}nav a:hover{color:var(--gold)}
-.hero{min-height:76vh;display:grid;place-items:center;text-align:center;padding:80px 6%;background:radial-gradient(circle at 50% 30%,#3b300f 0,#171308 22%,#0b0b0b 58%)}
-.hero h1{font-size:clamp(46px,8vw,92px);line-height:.95;margin:0 0 20px;font-weight:950}.hero h1 span{color:var(--gold)}
-.hero p{max-width:650px;margin:0 auto 30px;color:#c9c9c9;font-size:18px;line-height:1.7}
-.btn{display:inline-block;background:var(--gold);color:#111;text-decoration:none;border:0;border-radius:999px;padding:14px 25px;font-weight:900;cursor:pointer}.btn.alt{background:transparent;color:#fff;border:1px solid #555;margin-left:10px}
-section{padding:70px 6%;max-width:1200px;margin:auto}.title{text-align:center;margin-bottom:38px}.title h2{font-size:40px;margin:0 0 8px}.title p{color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:var(--card);border:1px solid #262626;border-radius:20px;overflow:hidden;transition:.25s}.card:hover{transform:translateY(-5px);border-color:#51451f}
-.foodimg{height:180px;display:grid;place-items:center;background:linear-gradient(135deg,#26200d,#111);font-size:74px}
-.cardbody{padding:18px}.cardbody h3{margin:0 0 7px;font-size:20px}.cardbody p{color:#999;min-height:43px;margin:0 0 14px}.row{display:flex;align-items:center;justify-content:space-between}.price{color:var(--gold);font-weight:900;font-size:19px}
-.offer{background:linear-gradient(135deg,#f6c343,#d79412);color:#111;border-radius:28px;padding:42px;text-align:center}.offer h2{font-size:38px;margin:0 0 10px}.offer p{font-size:17px}
-.cart{position:fixed;right:20px;bottom:20px;background:var(--gold);color:#111;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:25px;font-weight:900;box-shadow:0 8px 30px #000;z-index:20}
-footer{border-top:1px solid #252525;padding:35px 6%;text-align:center;color:#888}
-@media(max-width:700px){nav a{display:none}.hero{min-height:68vh}.btn.alt{margin:10px 0 0}.title h2{font-size:32px}}
-</style>
-</head>
-<body>
-<nav><div class="logo">TPK <span>Food Store</span></div><div><a href="#menu">Menu</a><a href="#offers">Offers</a><a href="#contact">Contact</a></div></nav>
-<header class="hero">
-<div><div style="color:var(--gold);font-weight:900;letter-spacing:3px;margin-bottom:14px">FRESH • FAST • DELICIOUS</div>
-<h1>GOOD FOOD.<br><span>GOOD MOOD.</span></h1>
-<p>Welcome to TPK Food Store — your place for delicious favorites, generous portions and a great food experience.</p>
-<a class="btn" href="#menu">Order Now</a><a class="btn alt" href="#offers">View Offers</a></div>
-</header>
-<section id="menu"><div class="title"><h2>Our Menu</h2><p>Pick your favorite and add it to your order.</p></div>
-<div class="grid">
-<div class="card"><div class="foodimg">🍔</div><div class="cardbody"><h3>Classic Burger</h3><p>Juicy burger with fresh toppings and signature sauce.</p><div class="row"><span class="price">Rs. 499</span><button class="btn" onclick="add('Classic Burger')">Add</button></div></div></div>
-<div class="card"><div class="foodimg">🍕</div><div class="cardbody"><h3>Cheese Pizza</h3><p>Loaded with melted cheese and delicious toppings.</p><div class="row"><span class="price">Rs. 699</span><button class="btn" onclick="add('Cheese Pizza')">Add</button></div></div></div>
-<div class="card"><div class="foodimg">🍗</div><div class="cardbody"><h3>Crispy Chicken</h3><p>Crispy, golden and packed with flavor.</p><div class="row"><span class="price">Rs. 599</span><button class="btn" onclick="add('Crispy Chicken')">Add</button></div></div></div>
-<div class="card"><div class="foodimg">🍟</div><div class="cardbody"><h3>Loaded Fries</h3><p>Golden fries with our tasty signature toppings.</p><div class="row"><span class="price">Rs. 299</span><button class="btn" onclick="add('Loaded Fries')">Add</button></div></div></div>
-</div></section>
-<section id="offers"><div class="offer"><h2>Special Offer 🎉</h2><p>Make your meal extra special with our delicious combo deals.</p><a class="btn" href="#menu">Shop the Menu</a></div></section>
-<section id="contact"><div class="title"><h2>Visit TPK Food Store</h2><p>Ready to order? Contact us and enjoy your meal.</p><a class="btn" href="tel:+923000000000">Call to Order</a></div></section>
-<div class="cart" id="cart">0</div>
-<footer>© 2026 TPK Food Store. All rights reserved.</footer>
-<script>let n=0;function add(name){n++;document.getElementById('cart').textContent=n;alert(name+' added to your order!')}</script>
-</body></html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaGear Store — Power Your Everyday | Premium Tech & Audio</title>
+    <meta name="description" content="Premium consumer electronics and modern tech accessories. Upgrade your everyday with high-performance audio, smart essentials, and charging gear." />
+    <meta property="og:title" content="NovaGear Store — Power Your Everyday" />
+    <meta property="og:description" content="Premium consumer electronics and modern tech accessories e-commerce store." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#050B1C] text-[#111827] font-sans antialiased selection:bg-[#2563FF] selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
